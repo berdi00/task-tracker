@@ -2,9 +2,9 @@
   <header>
     <h1>{{ title }}</h1>
     <ButtonCp
-      @toggle-add-task="$emit('toggle-add-task')"
-      text="Add task"
-      color="green"
+      @btn-click="$emit('btn-click')"
+      :text="showAddTask ? 'Close' : 'Add Task' "
+      :color="showAddTask ? 'red' : 'green'"
     />
   </header>
 </template>
@@ -19,6 +19,7 @@ export default {
   // props: ["title"],
   props: {
     title: String,
+    showAddTask: Boolean
   },
 };
 </script>

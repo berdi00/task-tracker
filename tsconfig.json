@@ -1,19 +1,20 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
-  "compilerOptions": {
-    "noImplicitAny": false,
-    "allowJs": true,
-    "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
+    "extends": "@vue/tsconfig/tsconfig.web.json",
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "allowJs": true,
+        "strict": true,
+        "target": "ES2018",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "types": ["@types/node"]
+    },
 
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
-    }
-  ]
+    "references": [
+        {
+            "path": "./tsconfig.config.json"
+        }
+    ]
 }
